@@ -185,7 +185,7 @@
                 </div>
              </div>
              <div class="col">
-                <form action="" method="post" name="contact-form" id="contact-form">
+                <form action="https://script.google.com/macros/s/AKfycbxaHicf8PXVM2LTZ1KAyUQRmLyp4bpB6AaDAQN3OdBnJEvYYrXOnStqAlGcn0shUhYnBg/exec" method="post" name="contact-form" id="contact-form">
                     <div class="form-control">
                     <div class="form-inputs">
                         <input type="text" class="input-field" name="Nom" placeholder="Name" required>
@@ -252,18 +252,6 @@
 
     <!-- ----- MAIN JS ----- -->
     <script src="assets/js/main.js"></script>
-    <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbxaHicf8PXVM2LTZ1KAyUQRmLyp4bpB6AaDAQN3OdBnJEvYYrXOnStqAlGcn0shUhYnBg/exec'
-
-        const form = document.forms['contact-form']
-        
-        form.addEventListener('submit', e => {
-          e.preventDefault()
-          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-          .then(response => alert("Thank you! your form is submitted successfully." ))
-          .then(() => { window.location.reload(); })
-          .catch(error => console.error('Error!', error.message))
-})
-    </script>
+    
 </body>
 </html>
